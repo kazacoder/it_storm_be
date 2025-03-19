@@ -3,7 +3,7 @@ const config = {
     env: process.env.ENV,
     port: 3000,
     db: {
-        dbUrl: 'mongodb://127.0.0.1:27017',
+        dbUrl: 'mongodb://mongo:27017',
         dbName: 'diploma',
         dbHost: 'localhost',
         dbPort: 27017,
