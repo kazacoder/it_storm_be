@@ -29,7 +29,7 @@ services:
     environment:
       ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/
       ME_CONFIG_BASICAUTH: false
-
+    restart: always
 
 
 volumes:
