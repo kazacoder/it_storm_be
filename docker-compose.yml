@@ -42,9 +42,9 @@ services:
     ports:
       - "3055:3055"
     networks:
-      - home_decor-network
+      - it_storm-network
     depends_on:
-      - home_decor
+      - it_storm
 
 volumes:
   static_volume:
