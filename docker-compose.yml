@@ -31,6 +31,20 @@ services:
       ME_CONFIG_BASICAUTH: false
     restart: always
 
+  nginx:
+    image: nginx:latest
+    volumes:
+      - /home/user/it_storm_be/nginx/nginx.conf:/etc/nginx/nginx.conf
+      #      поменять!!!
+      - /home/user/lls/certs:/etc/nginx/certs
+      - static_volume:/static
+      - /home/user/it_storm_be/uploads:/uploads
+    ports:
+      - "3055:3055"
+    networks:
+      - home_decor-network
+    depends_on:
+      - home_decor
 
 volumes:
   static_volume:
